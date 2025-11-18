@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f3f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        
+        background: url('/static/images/5.jpg') no-repeat center center/cover;
+        }
+        .box {
+            background: white;
+            width: 350px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #258cfb;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            
+        }
+
+        button:hover {
+            background-color: #025aa5;   /* darker on hover */
+                    }
+
+        .msg {
+            color: rgb(248, 241, 241);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Signup</h2>
+
+        <!-- Flash messages 
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="msg">{{ messages[0] }}</div>
+        {% endif %}
+        {% endwith %}-->
+
+        <form action="/signup" method="POST" >
+         user name :<input type="text" name="username" placeholder="Enter your name" required> <br>
+         password:<input type="password" name="password" placeholder="Enter your Password" required>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</body>
+
+</html>
